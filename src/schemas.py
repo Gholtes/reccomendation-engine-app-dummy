@@ -17,13 +17,18 @@ class userRequest(BaseModel):
 
 class reviewRequest(BaseModel):
 	'''Defines a review datapoint'''
-	user: str
-	item: str
+	user_id: str
+	product_id: str
 	rating: Optional[int] = 0
 
 class transactionRequest(BaseModel):
 	'''Defines a transaction basket datapoint'''
 	basket: List[str] #list of product ids 
 	user_id: Optional[str] = None
+
+class viewRequest(BaseModel):
+	'''Defines a user product view datapoint'''
+	product_id: str
+	user_id: str
 
 #Define Response Schemas

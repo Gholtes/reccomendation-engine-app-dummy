@@ -84,3 +84,6 @@ def add(request: reviewRequest, response: Response):
 def add(request: transactionRequest, response: Response):
 	return {"Status": "Success"}
 
+@app.post('/add_view/', status_code=200)
+def add(request: viewRequest, response: Response):
+	return {"Status": "Success"}
